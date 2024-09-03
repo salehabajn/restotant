@@ -7,7 +7,7 @@ class FirstScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return
       Scaffold(
-      body:SafeArea(child:Container(
+      body:Container(
         //padding:EdgeInsets.only(left:15,right:  ),
         decoration: BoxDecoration(color: Colors.red[300]),
         width: MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height,
@@ -35,7 +35,7 @@ class FirstScreen extends StatelessWidget {
 
               decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.only(topLeft: Radius.circular(40),topRight:  Radius.circular(40))),
               width: MediaQuery.of(context).size.width,
-              height:MediaQuery.of(context).size.height-228,
+              height:MediaQuery.of(context).size.height-200,
 child: Column(children: [
   SizedBox(height: 20),
   Container(
@@ -56,10 +56,10 @@ child: Column(children: [
     height: 60,
     width:  MediaQuery.of(context).size.width-50,
   ),
-  SizedBox(height: 20),
+  SizedBox(height: 10),
   Container(
 
-    height: 460,
+    height: 500,
    width:  MediaQuery.of(context).size.width-40,
     child: ListView.builder(
         itemCount: 10,
@@ -69,15 +69,15 @@ child: Column(children: [
           decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(20),
               boxShadow:[BoxShadow(color: Colors.black.withOpacity(.2),offset: Offset(5,4),spreadRadius: 1,blurRadius: 3)]), margin:EdgeInsets.symmetric(vertical: 10),
           // color: Colors.yellow,
-          height: 100,//width: MediaQuery.of(cnt).size.width-70,
+          height: 83,//width: MediaQuery.of(cnt).size.width-70,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           //crossAxisAlignment: CrossAxisAlignment.
           children: [
           Container(
-            width:MediaQuery.of(context).size.width*1/4,
+            width:MediaQuery.of(context).size.width*1/4-10,
              // color: Colors.black,
-            decoration: BoxDecoration(color: Colors.black,image: DecorationImage(image: AssetImage("assets/images/1.jpg"),)),
+            decoration: BoxDecoration(color: Colors.black,image: DecorationImage(image: AssetImage("assets/images/t.jpg"),)),
           ),
           SizedBox(width: 10,),
          Container(
@@ -87,7 +87,7 @@ child: Column(children: [
               // mainAxisAlignment: MainAxisAlignment.start,
                crossAxisAlignment: CrossAxisAlignment.start
               , children: [
-               Text("fejrhgeu", style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+               Text("shomokh alyemen", style:TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
                Text("fejrhgeu"),
                    Text("fejrhgeu"),
                      Row(children: [
@@ -106,7 +106,7 @@ child: Column(children: [
 
              ],),
              SizedBox(width: 50),
-             Icon(Icons.favorite,color: Colors.orange,size: 30,),
+             Icon(Icons.favorite,color: Colors.orange,size: 25,),
            //  SizedBox(width: 100),
            ],),
 
@@ -148,11 +148,6 @@ child: Column(children: [
 
           ],
         ),
-      ),
-        //  Image.asset("assets/images/top1.jpg",width: MediaQuery.of(context).size.width*1/2,height: 200,),
-
-
-
       )
 
 
