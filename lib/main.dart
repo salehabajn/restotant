@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:resturant/homescreen.dart';
-import 'package:resturant/secound.dart';
-import 'package:resturant/thirdscreen.dart';
+import 'package:resturant/views/homescreen.dart';
+import 'package:resturant/views/secound.dart';
+import 'package:resturant/views/thirdscreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
 
      // theme: ThemeData(useMaterial3: true),
-    //  home: FirstScreen(),
-      home:SecoundScreen(),
+      home: FirstScreen(),
+  //    home:SecoundScreen(),
      // home:ThirdScreen(),
 
     );}}//

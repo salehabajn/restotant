@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:resturant/food.dart';
+import 'package:resturant/models/food.dart';
 
 class ThirdScreen extends StatelessWidget {
   List <Food>all=[];

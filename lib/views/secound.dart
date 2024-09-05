@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:resturant/food.dart';
+import 'package:resturant/models/food.dart';
+import 'package:resturant/models/restorants.dart';
+import 'package:resturant/vm/vm.dart';
 
 class SecoundScreen extends StatelessWidget {
   List <Food>all=[];
@@ -7,13 +9,15 @@ class SecoundScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List <Food>all=[];
-    all.add(Food(name: "fahsah", dis: "aaaaaaaa", dis2: "bbbbbbbbb", lastpric: "\$20", firstprice: "\$30", image: "assets/images/1.jpg"));
-    all.add(Food(name: "saltah", dis: "aaaaaaaa", dis2: "bbbbbbbbb", lastpric: "\$30", firstprice: "\$30", image: "assets/images/2.jpg"));
-    all.add(Food(name: "bint asohen", dis: "aaaaaaaa", dis2: "bbbbbbbbb", lastpric: "\$40", firstprice: "\$30", image: "assets/images/3.jpg"));
-    all.add(Food(name: "shofoot", dis: "aaaaaaaa", dis2: "bbbbbbbbb", lastpric: "\$10", firstprice: "\$30", image: "assets/images/4.jpg"));
-    all.add(Food(name: "soshi", dis: "aaaaaaaa", dis2: "bbbbbbbbb", lastpric: "\$10", firstprice: "\$30", image: "assets/images/5.jpg"));
-    all.add(Food(name: "haris", dis: "aaaaaaaa", dis2: "bbbbbbbbb", lastpric: "\$10", firstprice: "\$30", image: "assets/images/6.jpg"));
+    Restorants allres= ModalRoute.of(context)!.settings.arguments as Restorants;
+    VMfood VMF=VMfood();
+     List <Food>all=VMF.loadfood();
+    // all.add(Food(name: "fahsah", dis: "aaaaaaaa", dis2: "bbbbbbbbb", lastpric: "\$20", firstprice: "\$30", image: "assets/images/1.jpg"));
+    // all.add(Food(name: "saltah", dis: "aaaaaaaa", dis2: "bbbbbbbbb", lastpric: "\$30", firstprice: "\$30", image: "assets/images/2.jpg"));
+    // all.add(Food(name: "bint asohen", dis: "aaaaaaaa", dis2: "bbbbbbbbb", lastpric: "\$40", firstprice: "\$30", image: "assets/images/3.jpg"));
+    // all.add(Food(name: "shofoot", dis: "aaaaaaaa", dis2: "bbbbbbbbb", lastpric: "\$10", firstprice: "\$30", image: "assets/images/4.jpg"));
+    // all.add(Food(name: "soshi", dis: "aaaaaaaa", dis2: "bbbbbbbbb", lastpric: "\$10", firstprice: "\$30", image: "assets/images/5.jpg"));
+    // all.add(Food(name: "haris", dis: "aaaaaaaa", dis2: "bbbbbbbbb", lastpric: "\$10", firstprice: "\$30", image: "assets/images/6.jpg"));
     return
       Scaffold(
           body:Container(
@@ -56,7 +60,7 @@ class SecoundScreen extends StatelessWidget {
                         // mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start
                         , children: [
-                        Text("shomokh alyemen", style:TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                        Text(allres.name, style:TextStyle(fontSize: 17,fontWeight: FontWeight.bold),),
                         Text("fejrhgeukhds loiiro ihyrfte", style:TextStyle(fontSize: 13)),
 
 
